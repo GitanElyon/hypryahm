@@ -30,7 +30,7 @@ hypryahm [options]
 
 ### Options
 
-- `-c`: Cycle forward to the next wallpaper.
+- `-n`: Cycle forward to the next wallpaper.
 - `-p`: Cycle backward to the previous wallpaper.
 - `-r`: Set a random wallpaper.
 - `-w <directory>`: Specify a custom directory to search for images.
@@ -46,7 +46,7 @@ hypryahm -r
 
 **Cycle to the next wallpaper in a specific folder:**
 ```bash
-hypryahm -w ~/Pictures/Nature -c
+hypryahm -w ~/Pictures/Nature -n
 ```
 
 **Set a specific image:**
@@ -68,5 +68,5 @@ You can bind `hypryahm` to keybindings in your `hyprland.conf`:
 
 ```ini
 bind = $mainMod, W, exec, hypryahm -r
-bind = $mainMod SHIFT, W, exec, hypryahm -c
+bind = $mainMod SHIFT, W, exec, hypryahm -n
 ```
