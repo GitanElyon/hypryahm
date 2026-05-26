@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# hyprwall.sh - Manage wallpapers with hyprpaper
+# hypryahm.sh - Manage wallpapers with hyprpaper
 # Features: Cycle forward/backward, random, specify directory/image
 
 # Common wallpaper directories
@@ -11,7 +11,7 @@ SEARCH_DIRS=(
     "$HOME/.config/wallpapers"
 )
 
-STATE_FILE="$HOME/.cache/hyprwall_state"
+STATE_FILE="$HOME/.cache/hypryahm_state"
 WALLPAPER_DIR=""
 FIT_MODE=""
 
@@ -21,8 +21,8 @@ mkdir -p "$(dirname "$STATE_FILE")"
 show_help() {
     echo "Usage: $(basename "$0") [options]"
     echo "Options:"
-    echo "  -c          Cycle one forward"
-    echo "  -p          Cycle one backward"
+    echo "  -n          Cycle next wallpaper"
+    echo "  -p          Cycle previous wallpaper"
     echo "  -r          Random wallpaper"
     echo "  -w <dir>    Specify wallpaper directory"
     echo "  -i <file>   Set specific image"
@@ -116,9 +116,9 @@ set_wallpaper() {
 ACTION=""
 SPECIFIC_VAL=""
 
-while getopts "cprw:i:m:h" opt; do
+while getopts "nprw:i:m:h" opt; do
     case "$opt" in
-        c) ACTION="next" ;;
+        n) ACTION="next" ;;
         p) ACTION="prev" ;;
         r) ACTION="random" ;;
         w) WALLPAPER_DIR="$OPTARG" ;;

@@ -1,6 +1,6 @@
-# hyprwall
+# hypryahm
 
-`hyprwall` is a lightweight bash script designed to simplify wallpaper management for [hyprpaper](https://github.com/hyprwm/hyprpaper) on Hyprland. It adds functionality like cycling through wallpapers, choosing random images, and automatically handling multiple monitors.
+`hypryahm`, Hypr-Yet-Another-Hyprpaper-Manager, is a lightweight bash script designed to simplify wallpaper management for [hyprpaper](https://github.com/hyprwm/hyprpaper) on Hyprland. It adds functionality like cycling through wallpapers, choosing random images, and automatically handling multiple monitors.
 
 ## Features
 
@@ -12,20 +12,20 @@
 
 ## Installation
 
-1. Download the `hyprwall.sh` script.
+1. Download the `hypryahm.sh` script.
 2. Make it executable:
    ```bash
-   chmod +x hyprwall.sh
+   chmod +x hypryahm.sh
    ```
 3. (Optional) Move it to your PATH for easier access:
    ```bash
-   mv hyprwall.sh ~/.local/bin/hyprwall
+   mv hypryahm.sh ~/.local/bin/hypryahm
    ```
 
 ## Usage
 
 ```bash
-hyprwall [options]
+hypryahm [options]
 ```
 
 ### Options
@@ -41,22 +41,22 @@ hyprwall [options]
 
 **Set a random wallpaper from default locations:**
 ```bash
-hyprwall -r
+hypryahm -r
 ```
 
 **Cycle to the next wallpaper in a specific folder:**
 ```bash
-hyprwall -w ~/Pictures/Nature -c
+hypryahm -w ~/Pictures/Nature -c
 ```
 
 **Set a specific image:**
 ```bash
-hyprwall -i ~/Pictures/Wallpapers/mountain.jpg
+hypryahm -i ~/Pictures/Wallpapers/mountain.jpg
 ```
 
 ## Default Search Directories
 
-If no directory is specified with `-w`, `hyprwall` will search for images in the following locations:
+If no directory is specified with `-w`, `hypryahm` will search for images in the following locations:
 - `~/Wallpapers`
 - `~/Pictures/Wallpapers`
 - `~/Pictures/wallpaper`
@@ -64,9 +64,9 @@ If no directory is specified with `-w`, `hyprwall` will search for images in the
 
 ## Integration with Hyprland
 
-You can bind `hyprwall` to keybindings in your `hyprland.conf`:
+You can bind `hypryahm` to keybindings in your `hyprland.conf`:
 
 ```ini
-bind = $mainMod, W, exec, hyprwall -r
-bind = $mainMod SHIFT, W, exec, hyprwall -c
+bind = $mainMod, W, exec, hypryahm -r
+bind = $mainMod SHIFT, W, exec, hypryahm -c
 ```
