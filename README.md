@@ -35,6 +35,7 @@ hypryahm [options]
 - `-r`: Set a random wallpaper.
 - `-w <directory>`: Specify a custom directory to search for images.
 - `-i <file>`: Set a specific image file as your wallpaper.
+- `-m <mode>`: Fit mode: fill, tile, cover, contain (default: fill)"
 - `-h`: Show help information.
 
 ### Examples
